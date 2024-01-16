@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="index.css">
+<style>
+ body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Foodimage/food1.jpg");
+
+  /* Set a specific height */
+  height: 70%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+      <a class="navbar-brand" href="index.html">In a box</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Services and 
+                products offered
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="recipe.html">Recipe guides</a>
+              <a class="dropdown-item" href="BakeAtHome.html">Bake at home set</a>
+              <a class="dropdown-item" href="ingredient.html">Ingredients</a>
+              <a class="dropdown-item" href="otheritems.html">Other items</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="packages.html">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact us</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal">
+            Sign up
+          </button>
+          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#loginmodal">Sign in
+          </button>
+        <form class="form-inline my-2 my-lg-0"  id="search" role="search">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </ul>
+      </div>
+      </nav>
+    
+                                <!-- The Modal -->
+                                <div class="modal" id="myModal">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                
+                                      <!-- Modal Header -->
+                                      <div class="modal-header">
+                                        <h4 class="modal-title">Sign Up</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      </div>
+                                
+                                      <!-- Modal body -->
+                                      <div class="modal-body">
+                                        <div class="form-group">
+                                          <label for="name">User Name:</label>
+                                          <input type="text" class="form-control" placeholder="Enter name" id="name">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="email">Email address:</label>
+                                          <input type="email" class="form-control" placeholder="Enter email" id="email">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="pwd">Password:</label>
+                                          <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="compwd">Comfirm Password:</label>
+                                          <input type="password" class="form-control" placeholder="Enter password" id="compwd">
+                                        </div>
+
+                                        <div class="container">
+                                        Already have an account? <button type="button" class="btn btn-link" data-toggle="modal" data-target="#loginmodal">Sign in</button>
+                                      </div>
+                                      </div>
+                                
+                                      <!-- Modal footer -->
+                                      <div class="modal-footer">
+                                        <button type="submit" class="btn btn-dark btn-lg">Sign Up</button>
+                                      </div>
+                                
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!--Signin modal-->
+<div class="modal" id="loginmodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Sign In</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="email">User Name:</label>
+          <input type="text" class="form-control" placeholder="Enter name" id="name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input type="email" class="form-control" placeholder="Enter email" id="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+        </div>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"> Remember me
+          </label>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Sign In</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+              <div class="hero-image">
+                <div class="hero-text">
+                  <h1>Let's cook our own meal!!!</h1>
+                  <p>In a box delivers high quality ingredients directly to your home </p>
+                  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal">
+                    Get started
+                  </button>
+                </div>
+              </div>
+
+              <br>
+              <hr style="width:50%; text-align:center; height: 1px; border-width:1px; color:black; background-color:black;">
+              <br>
+
+              <div class="container">
+                <div style="padding-bottom: 40px;" >
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h1 class="text-center">Choose your own meal</h1>
+                    <p class="text-center">We have a variety of high quality recipes <br>
+                      of the top-rated dishes designed <br>
+                      by the professional chefs to choose from<br>
+                    and options to premium dishes and more </p>
+                  </div>
+                  <div class="col-sm-6">
+                    <img src="Foodimage/food2.jpg" style="width:70%; height:80%;" class="mx-auto d-block">
+                  </div>
+                </div>
+                </div>
+
+                <div style="padding-top: 10px; padding-bottom: 10px;">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img src="Foodimage/Boxopening.jpg" style="width:70%; height:90%;" class="mx-auto d-block">
+                  </div>
+                  <div class="col-sm-6">
+                    <h1 class="text-center">Receive and unpack your box</h1>
+                    <p class="text-center">All of the ingredients in are all fresh<br>
+                       and came right from the farm.<br>
+                      We deliver them in a high-quality box<br>
+                    right to your home</p>
+                  </div>
+                </div>
+              </div>
+
+                <div style="padding-top: 40px;">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h1 class="text-center">Cook, and enjoy your meal</h1>
+                    <p class="text-center">Follow the step-by-step instruction<br>
+                    to cook the amazing meal and discover new tastes.<br>
+                   Enjoy delicious and healthy meal with your family.</p>
+                  </div>
+                  <div class="col-sm-6">
+                    <img src="Foodimage/enjoyfood.jpg" style="width:70%; height:70%;" class="mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="container3">
+              <hr style=" width:50%; text-align:center; height: 1px; border-width:1px; color:black; background-color:black; ">
+            </div>
+              <!-- packages -->
+              <div class="container">
+              <h1 class="text-center">Packages offered</h1>
+              <br>
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="border">
+                  <h1 class="Jumbotron bg-success text-center">Beginners</h1>
+                  <ul>
+                    <li>standard weekly recipes</li>
+                    <li>1 bake at home set</li>
+                    <li>10% off nutritional information app</li>
+                    <li>10% off one special occasion gift box</li>
+                  </ul>
+                  <button type="button" class="btn btn-success" style="margin-left: 90px; margin-bottom: 15px;" data-toggle="modal" data-target="#myModal">
+                    50$</button>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="border">
+                  <h1 class="Jumbotron bg-primary text-center">Everyday</h1>
+                  <ul>
+                    <li>35 weekly recipes to choose from</li>
+                    <li>3 bake at home sets</li>
+                    <li>50% off nutritional information app</li>
+                    <li>1 free special occasion gift box</li>
+                  </ul>
+                  <button type="button" class="btn btn-primary" style="margin-left: 90px; margin-bottom: 15px;" data-toggle="modal" data-target="#myModal">
+                    100$</button>
+                </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="border">
+                  <h1 class="Jumbotron bg-warning text-center"> Deluxe</h1>
+                  <ul>
+                    <li>50 weekly recipes to choose from</li>
+                    <li>5 bake at home sets</li>
+                    <li>Free nutritional information app</li>
+                    <li>3 special occasion gift boxes</li>
+                  </ul>
+                  <button type="button" class="btn btn-warning" style="margin-left: 90px; margin-bottom: 15px;" data-toggle="modal" data-target="#myModal">
+                    150$</button>
+                </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="border">
+                  <h1 class="Jumbotron text-center"> Custom</h1>
+                  <ul>
+                    <li>Custom packages cater for dietary requirements and allergies</li>
+                </ul>
+                <a href="contactus.html" class="btn btn-light" style="margin-left: 90px; margin-bottom: 15px;">contact us</a>
+                </div>
+              </div>
+            </div>
+            <hr style="width:50%; text-align:center; height: 1px; border-width:1px; color:black; background-color:black; ">
+          </div>
+
+          <!--Footer-->
+            <footer class="footer">
+              <div class="footer__addr">
+                <h1 class="footer__logo">In a box</h1>
+                    
+                <h2>Contact</h2>
+                
+                <address>
+                  inabox@gmail.com<br>
+                      
+                  <a class="footer__btn" href="mailto:inabox@gmail.com">Email Us</a>
+                </address>
+              </div>
+              
+              <ul class="footer__nav">
+                <li class="nav__item">
+                  <h2 class="nav__title">Media</h2>
+            
+                  <ul class="nav__ul">
+                    <li>
+                      <a href="https://www.linkedin.com/feed/">Linkedin</a>
+                    </li>
+            
+                  <li>
+                      <a href="https://www.instagram.com/">Instragram</a>
+                    </li>
+                        
+                    <li>
+                      <a href="https://www.facebook.com/">Facebook</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav__item">
+                  <h2 class="nav__title">Services and products</h2>
+            
+                  <ul class="nav__ul">
+                    <li>
+                      <a href="recipe.html">Recipe guides</a>
+                    </li>
+            
+                  <li>
+                      <a href="BakeAtHome.html">Bake at home set</a>
+                    </li>
+                        
+                    <li>
+                      <a href="ingredient.html">Ingredients</a>
+                    </li>
+
+                    <li>
+                      <a href="otheritems.html">Other items</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <h2 class="nav__title">Information</h2>
+                  
+                  <ul class="nav__ul">
+                    <li>
+                      <a href="index.html">Home</a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                      <a href="aboutus.html">About us</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              
+              <div class="legal">
+                <p>© 2022 in a box. All rights reserved.</p>
+                
+              </div>
+            </footer>
+    </body>
+</html>
